@@ -1,49 +1,49 @@
 -- 1. Show all the data in the owners table.
-
+SELECT * FROM owner;
 
 
 -- 2. Show the names of all owners.
-
+SELECT * FROM property;
 
 
 -- 3. Show the ages of all of the owners in ascending order.
-
+SELECT * FROM owner ORDER BY age;
 
 
 -- 4. Show the name of an owner whose name is Donald.
-
+SELECT * FROM owner WHERE name = 'Donald';
 
 
 -- 5. Show the age of all owners who are older than 30.
-
+SELECT * FROM owner WHERE age > 30;
 
 
 -- 6. Show the name of all owners whose name starts with an E.
-
+SELECT * FROM owner Where name LIKE 'E%';
 
 
 -- 7. Change Jane's age to 30.
-
+UPDATE owner SET age = 30 WHERE age = 43;
 
 
 -- 8. Change Jane's name to Janet.
-
+UPDATE owner SET name = 'Janet' WHERE name = 'Jane';
 
 
 -- 9. Delete the owner named Janet.
-
-
+DELETE FROM property WHERE owner_id = 3;
+DELETE FROM owner WHERE name = 'Janet';
 
 -- 10. Show the names of the first three owners in your owners table.
-
+SELECT * FROM owner LIMIT 3;
 
 
 -- 11. List all properties sorted by the owners names
-
+SELECT * FROM property ORDER BY name;
 
 
 -- 12. Show all of the properties in alphabetical order that are not named Archstone and do not have an id of 3 or 5.
-
+SELECT * FROM property WHERE id !=3 AND id !=5 AND name != 'Archstone' ORDER BY name;
 
 
 --- Bonuses (attempt at least 2)
@@ -55,13 +55,13 @@
 
 
 -- 14. Count the total number of properties where the owner_id is between 1 and 3.
-
+SELECT * FROM property WHERE owner_id IN (1,2,3);
 
 
 -- 15. Show the highest age of all owners.
-
+SELECT MAX(age) FROM owner;
 
 
 -- 16. Show the name of all owners whose name starts with an E.
-
+SELECT * FROM owner Where name LIKE 'E%';
 
